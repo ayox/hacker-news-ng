@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { StoriesComponent } from './stories/stories.component';
-import { ItemCommentsComponent } from './item-comments/item-comments.component';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { StoriesComponent } from "./stories/stories.component";
+import { ItemCommentsComponent } from "./item-comments/item-comments.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "news/1", pathMatch: "full" },
@@ -37,4 +37,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
