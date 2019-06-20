@@ -1,7 +1,7 @@
-<div *ngIf="!items" class="loading-section">
+<div *ngIf="isLoading===true" class="loading-section">
   <app-loading></app-loading>
   </div>
-<div class="main-content">
+<div *ngIf="isLoading!==true" class="main-content">
   <ol>
     <li *ngFor="let item of items" class="post">
       <app-item class="item-block" [item]="item"></app-item>
