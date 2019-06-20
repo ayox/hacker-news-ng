@@ -8,7 +8,11 @@ import { HNAPIService } from "../hn-api.service";
 })
 export class ItemComponent implements OnInit {
   @Input() item;
+  @Input() isMobile;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+
 }

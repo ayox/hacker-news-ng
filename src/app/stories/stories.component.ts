@@ -15,12 +15,26 @@ export class StoriesComponent implements OnInit {
   isLoading = true;
   pageNum: number;
   listStart: number;
+  isMobile =false;
   constructor(
     private _hnApiService: HNAPIService,
     private route: ActivatedRoute
   ) {}
+  getIsMobile(): boolean {
+    const w = document.documentElement.clientWidth;
+    const breakpoint = 768;
+    if (w < breakpoint) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   ngOnInit() {
+    this.isMobile = this.getIsMobile();
+    window.onresize = () => {
+      this.isMobile = this.getIsMobile();
+    };
     this.typeSub = this.route.data.subscribe(
       data => (this.storiesType = (data as any).storiesType)
     );
