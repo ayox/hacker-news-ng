@@ -8,10 +8,10 @@
     </li>
   </ol>
   <div class="nav">
-    <a href="" class="prev">
+    <a *ngIf="listStart !== 1" [routerLink]="['/' + storiesType, pageNum - 1]" class="prev">
       ‹ Prev
     </a>
-    <a href="" class="more">
+    <a *ngIf="items.length === 30" [routerLink]="['/' + storiesType, pageNum + 1]" class="more">
       More ›
     </a>
   </div>

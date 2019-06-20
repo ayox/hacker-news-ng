@@ -1,6 +1,6 @@
 <div class="item-laptop">
   <p>
-    <a class="title" href="">
+    <a class="title" href="{{item.url}}">
       {{ item.title }}
     </a>
     <span *ngIf="item.domain" class="domain">({{ item.domain }})</span>
@@ -14,7 +14,7 @@
       {{ item.time_ago }}
       <span>
         |
-        <a href="">
+        <a [routerLink]="['/item', item.id]">
           <span *ngIf="item.comments_count !== 0">
             {{ item.comments_count }}
             <span *ngIf="item.comments_count === 1">comment</span>
@@ -25,7 +25,6 @@
       </span>
     </span>
   </div>
-
   <div class="item-mobile">
     <!-- Markup that shows only on mobile (to give the app a
     responsive mobile feel). Same attributes as above

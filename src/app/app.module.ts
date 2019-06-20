@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { DomainPipe } from './domain.pipe';
 import { MomentModule } from 'ngx-moment';
 import { LoadingComponent } from './loading/loading.component';
+import { ItemCommentsComponent } from './item-comments/item-comments.component';
+import { CommentTreeComponent } from './comment-tree/comment-tree.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { LoadingComponent } from './loading/loading.component';
     FooterComponent,
     ItemComponent,
     DomainPipe,
-    LoadingComponent
+    LoadingComponent,
+    ItemCommentsComponent,
+    CommentTreeComponent,
+    CommentComponent
   ],
   imports: [BrowserModule,MomentModule, HttpClientModule, AppRoutingModule],
   providers: [HNAPIService],
