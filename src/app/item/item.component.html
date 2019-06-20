@@ -1,28 +1,31 @@
-<div *ngIf="!item" class="loading-section">
-<app-loading></app-loading>
-</div>
-<div *ngIf="item">
-  <div class="item-laptop">
-    <p>
-      <a class="title" href="{{item.url}}">
-        {{item.title}}
-      </a>
-      <span class="domain">{{item.url | domain}}</span>
-    </p>
-    <div class="subtext-laptop">
-      {{item.score}} points by
-      <a href="">{{item.by}}</a>
-      {{ (item.time | amFromUnix) | amTimeAgo }}
-      <a href="">
-        <span *ngIf="item.descendants !== 0">
-          {{item.descendants}}
-          <span *ngIf="item.descendants === 1">comment</span>
-          <span *ngIf="item.descendants > 1">comments</span>
-        </span>
-        <span *ngIf="item.descendants === 0">discuss</span>
-      </a>
-    </div>
+<div class="item-laptop">
+  <p>
+    <a class="title" href="">
+      {{ item.title }}
+    </a>
+    <span *ngIf="item.domain" class="domain">({{ item.domain }})</span>
+  </p>
+  <div class="subtext-laptop">
+    <span>
+      {{ item.points }} points by
+      <a href="">{{ item.user }}</a>
+    </span>
+    <span>
+      {{ item.time_ago }}
+      <span>
+        |
+        <a href="">
+          <span *ngIf="item.comments_count !== 0">
+            {{ item.comments_count }}
+            <span *ngIf="item.comments_count === 1">comment</span>
+            <span *ngIf="item.comments_count > 1">comments</span>
+          </span>
+          <span *ngIf="item.comments_count === 0">discuss</span>
+        </a>
+      </span>
+    </span>
   </div>
+
   <div class="item-mobile">
     <!-- Markup that shows only on mobile (to give the app a
     responsive mobile feel). Same attributes as above

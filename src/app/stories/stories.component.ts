@@ -11,7 +11,7 @@ export class StoriesComponent implements OnInit {
   constructor(private _hnApiService: HNAPIService) {}
 
   ngOnInit() {
-    this._hnApiService.fetchStories().subscribe(
+    this._hnApiService.fetchStories('news',1).subscribe(
       items => {
         // console.log(items);
         this.items = items;

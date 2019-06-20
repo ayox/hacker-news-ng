@@ -9,10 +9,10 @@ export class HNAPIService {
   baseUrl: string;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = "https://hacker-news.firebaseio.com/v0";
+    this.baseUrl = 'https://node-hnapi.herokuapp.com';
   }
-  fetchStories(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/topstories.json`);
+  fetchStories(storyType: string, page: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${storyType}?page=${page}`);
   }
   fetchItem(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/item/${id}.json`);
