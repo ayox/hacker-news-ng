@@ -11,9 +11,10 @@ $mobile-only: "only screen and (max-width : 768px)";
   width: 100%;
 
   @media #{$mobile-only} {
-    height: 50px;
-    position: fixed;
+    min-height: 50px;
+    position: sticky;
     top: 0;
+
   }
 
   a {
