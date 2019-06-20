@@ -14,6 +14,8 @@ import { LoadingComponent } from "./loading/loading.component";
 import { ItemCommentsComponent } from "./item-comments/item-comments.component";
 import { CommentTreeComponent } from "./comment-tree/comment-tree.component";
 import { CommentComponent } from "./comment/comment.component";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { CommentComponent } from "./comment/comment.component";
     CommentTreeComponent,
     CommentComponent
   ],
-  imports: [BrowserModule, MomentModule, HttpClientModule, AppRoutingModule],
+  imports: [BrowserModule, MomentModule, HttpClientModule, AppRoutingModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [HNAPIService],
   bootstrap: [AppComponent]
 })

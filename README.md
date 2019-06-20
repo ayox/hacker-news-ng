@@ -1,4 +1,4 @@
-# NgHn
+# NG-HN
 This project is based on this [Artical](https://houssein.me/angular2-hacker-news) and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 ## Development server
