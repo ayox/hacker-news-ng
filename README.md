@@ -1,7 +1,7 @@
 # NG-HN
 This project is based on this [Artical](https://houssein.me/angular2-hacker-news) and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3. 
 
-I managed to play around chrome audit to get this score: 
+I managed to get all fixes from chrome audit to achive this score: 
 ![](https://i.imgur.com/CeJrUcf.png)
 
 ## Development server
