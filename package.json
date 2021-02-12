@@ -18,7 +18,7 @@
     "@angular/forms": "~8.0.1",
     "@angular/platform-browser": "~8.0.1",
     "@angular/platform-browser-dynamic": "~8.0.1",
-    "@angular/pwa": "^0.803.4",
+    "@angular/pwa": "^0.1102.0",
     "@angular/router": "~8.0.1",
     "@angular/service-worker": "~8.0.1",
     "moment": "^2.24.0",
